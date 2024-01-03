@@ -20,14 +20,14 @@ const variants = {
 
 const Services = () => {
   const ref = useRef();
-  const isInView = useInView(ref, {margin:"-100px"})
-  console.log("isINview ", isInView);
+  const isInView = useInView(ref, { margin: "-100px" });
+  // console.log("isINview ", isInView);
   return (
     <motion.div
       className="services"
       variants={variants}
       initial="initial"
-    //   whileInView="animate
+      //   whileInView="animate
       ref={ref}
       animate={isInView && "animate"}
     >
@@ -43,12 +43,13 @@ const Services = () => {
           <img src="/people.webp" alt="" />
 
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
+            Business.
           </h1>
           <button> WHAT WE DO?</button>
         </div>
